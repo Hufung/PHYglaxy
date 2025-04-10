@@ -3,363 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DSE Physics Galaxy</title>
+    <title>DSE Physics: Force and Motion</title>
     <style>
         body {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            background: linear-gradient(135deg, #6b48ff, #00ddeb);
-            color: #333;
+            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
-            animation: fadeIn 1s ease-in;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        h1 {
+        header {
+            background-color: #2c3e50;
+            color: white;
             text-align: center;
-            color: #fff;
-            text-shadow: 2px 2px 4px #000;
-            font-size: 3.5em;
-            margin-bottom: 20px;
+            padding: 20px;
+        }
+        nav {
+            background-color: #34495e;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
         }
         h2 {
-            color: #ffd700;
-            border-bottom: 2px solid #ffd700;
-            padding-bottom: 5px;
-            margin-top: 30px;
-            font-size: 2.2em;
+            margin-top: 0;
         }
-        h3 {
-            color: #ff4500;
-            font-size: 1.6em;
-            margin-top: 15px;
+        ul, ol {
+            padding-left: 20px;
         }
-        .home, .section, .quiz {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 25px;
-            margin: 20px 0;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
+        .formula {
+            font-style: italic;
+            background-color: #f9f9f9;
+            padding: 5px 10px;
+            display: inline-block;
         }
-        .home:hover, .section:hover {
-            transform: scale(1.03);
+        .example {
+            background-color: #e8f4f8;
+            padding: 10px;
+            margin: 10px 0;
         }
-        .chapter-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .chapter {
-            flex: 1 1 45%;
-            background: #ffebcd;
-            padding: 15px;
-            border-radius: 10px;
+        footer {
             text-align: center;
-        }
-        .chapter a {
-            color: #6b48ff;
-            text-decoration: none;
-            font-size: 1.2em;
-        }
-        .chapter a:hover {
-            color: #ff4500;
-        }
-        .progress {
-            margin-top: 10px;
-            font-size: 1em;
-            color: #333;
-        }
-        p, ul {
-            line-height: 1.7;
-            font-size: 1.1em;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        ul li:before {
-            content: "🌟 ";
-            color: #ff4500;
-        }
-        .quiz h2 {
-            color: #6b48ff;
-        }
-        .question {
-            margin: 25px 0;
-        }
-        .question p {
-            font-weight: bold;
-            color: #333;
-        }
-        .option {
-            margin: 12px 0;
-        }
-        button {
-            background: #ff4500;
-            color: #fff;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1.2em;
-            transition: background 0.3s;
-        }
-        button:hover {
-            background: #6b48ff;
-        }
-        #result {
-            margin-top: 25px;
-            font-size: 1.3em;
-            text-align: center;
-        }
-        .complete-btn {
-            background: #00ddeb;
-            margin-top: 15px;
-        }
-        .complete-btn:hover {
-            background: #ffd700;
+            padding: 10px;
+            background-color: #2c3e50;
+            color: white;
+            position: relative;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <!-- Home Page -->
-    <div class="home" id="home">
-        <h1>🌌 Welcome to DSE Physics Galaxy 🌠</h1>
-        <p>Dive into the cosmic world of physics! Track your progress as you explore each chapter below.</p>
-        <div class="chapter-list">
-            <div class="chapter">
-                <a href="#chapter1">1. Heat and Gases</a>
-                <div class="progress" id="progress1">Progress: 0%</div>
+    <header>
+        <h1>DSE Physics: Force and Motion</h1>
+        <nav>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#position-motion">Position & Motion</a></li>
+                <li><a href="#newtons-laws">Newton’s Laws</a></li>
+                <li><a href="#work-energy">Work, Energy & Power</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>Welcome to this educational resource on DSE Physics: Force and Motion, aligned with the Hong Kong Diploma of Secondary Education (DSE) syllabus. This page covers key concepts such as motion, forces, work, energy, and power, providing explanations, formulas, examples, and practice questions to help you prepare for your exams.</p>
+        </section>
+
+        <section id="position-motion">
+            <h2>Position, Distance, and Motion</h2>
+            <h3>Key Concepts</h3>
+            <ul>
+                <li><strong>Position</strong>: Location relative to a reference point.</li>
+                <li><strong>Distance</strong>: Total path length traveled (scalar).</li>
+                <li><strong>Displacement</strong>: Shortest path between start and end points (vector).</li>
+                <li><strong>Speed</strong>: Distance per unit time (scalar, e.g., \( v = \frac{d}{t} \)).</li>
+                <li><strong>Velocity</strong>: Displacement per unit time (vector, e.g., \( v = \frac{s}{t} \)).</li>
+                <li><strong>Acceleration</strong>: Rate of change of velocity (e.g., \( a = \frac{\Delta v}{\Delta t} \)).</li>
+            </ul>
+            <h3>Equations of Motion</h3>
+            <p>For uniformly accelerated motion:</p>
+            <ul>
+                <li class="formula">\( v = u + at \)</li>
+                <li class="formula">\( s = ut + \frac{1}{2}at^2 \)</li>
+                <li class="formula">\( v^2 = u^2 + 2as \)</li>
+            </ul>
+            <p>Where: \( u \) = initial velocity, \( v \) = final velocity, \( a \) = acceleration, \( t \) = time, \( s \) = displacement.</p>
+            <h3>Example</h3>
+            <div class="example">
+                <p>A car starts from rest (\( u = 0 \)) and accelerates at \( 2 \, \text{m/s}^2 \) for 5 seconds. What is its final velocity?</p>
+                <p>Using \( v = u + at \): \( v = 0 + 2 \times 5 = 10 \, \text{m/s} \).</p>
             </div>
-            <div class="chapter">
-                <a href="#chapter2">2. Force and Motion</a>
-                <div class="progress" id="progress2">Progress: 0%</div>
+            <h3>Practice Questions</h3>
+            <ol>
+                <li>A ball is dropped from a height with \( u = 0 \) and \( a = 9.81 \, \text{m/s}^2 \). How far does it fall in 2 seconds?</li>
+                <li>A cyclist travels 50 m in 10 s. What is their average speed?</li>
+            </ol>
+        </section>
+
+        <section id="newtons-laws">
+            <h2>Newton’s Laws of Motion</h2>
+            <h3>First Law: Law of Inertia</h3>
+            <p>An object at rest stays at rest, and an object in motion stays in motion with the same speed and direction unless acted upon by an unbalanced force.</p>
+            <div class="example">
+                <p>A book on a table stays at rest because the downward gravitational force is balanced by the upward normal force.</p>
             </div>
-            <div class="chapter">
-                <a href="#chapter3">3. Wave Motion</a>
-                <div class="progress" id="progress3">Progress: 0%</div>
+            <h3>Second Law: Law of Acceleration</h3>
+            <p>The acceleration of an object is directly proportional to the net force acting on it and inversely proportional to its mass. Formula: <span class="formula">\( F = ma \)</span></p>
+            <div class="example">
+                <p>A 2 kg object accelerates at \( 5 \, \text{m/s}^2 \). The force is \( F = 2 \times 5 = 10 \, \text{N} \).</p>
             </div>
-            <div class="chapter">
-                <a href="#chapter4">4. Electricity and Magnetism</a>
-                <div class="progress" id="progress4">Progress: 0%</div>
+            <h3>Third Law: Law of Action and Reaction</h3>
+            <p>For every action, there is an equal and opposite reaction.</p>
+            <div class="example">
+                <p>When you jump off a boat, you push the boat backward, and it pushes you forward.</p>
             </div>
-            <div class="chapter">
-                <a href="#chapter5">5. Radioactivity and Nuclear Energy</a>
-                <div class="progress" id="progress5">Progress: 0%</div>
+            <h3>Key Formulas</h3>
+            <ul>
+                <li class="formula">\( F = ma \)</li>
+                <li class="formula">\( W = mg \) (Weight, where \( g = 9.81 \, \text{m/s}^2 \))</li>
+            </ul>
+            <h3>Practice Questions</h3>
+            <ol>
+                <li>A car of mass 1000 kg accelerates from rest to 20 m/s in 10 s. What is the net force?</li>
+                <li>Two objects, A (2 kg) and B (3 kg), experience the same force. Which has greater acceleration?</li>
+            </ol>
+        </section>
+
+        <section id="work-energy">
+            <h2>Work, Energy, and Power</h2>
+            <h3>Work</h3>
+            <p>Work is the transfer of energy when a force moves an object. Formula: <span class="formula">\( W = Fd \cos\theta \)</span> (where \( \theta \) is the angle between force and displacement).</p>
+            <div class="example">
+                <p>A 10 N force moves an object 5 m in the same direction (\( \theta = 0^\circ \)). Work = \( 10 \times 5 \times \cos 0 = 50 \, \text{J} \).</p>
             </div>
-            <div class="chapter">
-                <a href="#chapter6">6. Astronomy and Space Science</a>
-                <div class="progress" id="progress6">Progress: 0%</div>
+            <h3>Energy</h3>
+            <p><strong>Kinetic Energy (K.E.):</strong> Energy of motion. Formula: <span class="formula">\( K.E. = \frac{1}{2}mv^2 \)</span></p>
+            <p><strong>Gravitational Potential Energy (P.E.):</strong> Energy due to height. Formula: <span class="formula">\( P.E. = mgh \)</span></p>
+            <div class="example">
+                <p>A 1 kg object moving at 4 m/s has \( K.E. = \frac{1}{2} \times 1 \times 4^2 = 8 \, \text{J} \).</p>
             </div>
-            <div class="chapter">
-                <a href="#chapter7">7. Atomic World</a>
-                <div class="progress" id="progress7">Progress: 0%</div>
+            <h3>Conservation of Energy</h3>
+            <p>Total mechanical energy (K.E. + P.E.) is conserved if no external forces (like friction) do work.</p>
+            <h3>Power</h3>
+            <p>Rate of energy transfer. Formula: <span class="formula">\( P = \frac{W}{t} \) or \( P = Fv \)</span></p>
+            <div class="example">
+                <p>A machine does 100 J of work in 5 s. Power = \( \frac{100}{5} = 20 \, \text{W} \).</p>
             </div>
-            <div class="chapter">
-                <a href="#chapter8">8. Energy and Use of Energy</a>
-                <div class="progress" id="progress8">Progress: 0%</div>
-            </div>
-            <div class="chapter">
-                <a href="#chapter9">9. Medical Physics</a>
-                <div class="progress" id="progress9">Progress: 0%</div>
-            </div>
-        </div>
-    </div>
+            <h3>Practice Questions</h3>
+            <ol>
+                <li>A 2 kg object is lifted 3 m. What is its potential energy (\( g = 9.81 \, \text{m/s}^2 \))?</li>
+                <li>A 500 N force moves an object 10 m in 2 s. What is the power?</li>
+            </ol>
+        </section>
 
-    <!-- Compulsory Part -->
-    <div class="section" id="chapter1">
-        <h2>🔥 1. Heat and Gases</h2>
-        <h3>a. Temperature, Heat, and Internal Energy</h3>
-        <p>Temperature measures hotness (Celsius or Kelvin). Heat is energy transferred due to temperature differences, and internal energy is the sum of kinetic and potential energies of particles. Think of boiling water—energy makes molecules dance!</p>
-        <ul>
-            <li>Specific Heat Capacity: Q = mcΔT (e.g., water: 4186 J/kg·K).</li>
-            <li>First Law: ΔU = Q - W (energy conservation).</li>
-        </ul>
-        <h3>b. Transfer Processes</h3>
-        <p>Conduction (solids), convection (fluids), radiation (waves). Newton’s Law of Cooling: faster cooling when hotter.</p>
-        <ul>
-            <li>Conduction: Q = kA(ΔT/L).</li>
-            <li>Radiation: P ∝ T⁴ (Stefan-Boltzmann).</li>
-        </ul>
-        <h3>c. Change of State</h3>
-        <p>Latent heat is energy for phase changes (e.g., melting ice: 334 kJ/kg). No temp change during this!</p>
-        <h3>d. Gases</h3>
-        <p>Ideal Gas Law: PV = nRT. Kinetic theory: pressure from particle collisions.</p>
-        <ul>
-            <li>Boyle’s: PV = constant.</li>
-            <li>KE = (3/2)kT per molecule.</li>
-        </ul>
-        <button class="complete-btn" onclick="markComplete(1)">Mark as Complete</button>
-    </div>
-
-    <div class="section" id="chapter2">
-        <h2>🏃 2. Force and Motion</h2>
-        <h3>a. Position and Movement</h3>
-        <p>Displacement (s), velocity (v = Δs/Δt), acceleration (a = Δv/Δt). Graphs show motion!</p>
-        <h3>b. Force and Motion</h3>
-        <p>Newton’s Laws: 1st (inertia), 2nd (F = ma), 3rd (action-reaction). Friction: F = μN.</p>
-        <h3>c. Projectile Motion</h3>
-        <p>Horizontal (constant v), vertical (g = 9.81 m/s²). Range: R = v₀²sin2θ/g.</p>
-        <h3>d. Work, Energy, and Power</h3>
-        <p>Work: W = Fd cosθ. KE = ½mv², PE = mgh. Power: P = W/t.</p>
-        <h3>e. Momentum</h3>
-        <p>p = mv. Impulse: Δp = FΔt. Conservation in collisions.</p>
-        <h3>f. Uniform Circular Motion</h3>
-        <p>F = mv²/r. Acceleration: a = v²/r.</p>
-        <h3>g. Gravitation</h3>
-        <p>F = GMm/r². Field: g = GM/r².</p>
-        <button class="complete-btn" onclick="markComplete(2)">Mark as Complete</button>
-    </div>
-
-    <div class="section" id="chapter3">
-        <h2>🌊 3. Wave Motion</h2>
-        <h3>a. Nature and Properties of Waves</h3>
-        <p>Transverse (light) or longitudinal (sound). v = fλ. Interference, diffraction, Doppler.</p>
-        <h3>b. Light</h3>
-        <p>Reflection, refraction (n₁sinθ₁ = n₂sinθ₂), lenses. Total internal reflection in optics.</p>
-        <h3>c. Sound</h3>
-        <p>Pressure waves. Speed: 340 m/s in air. Doppler: f’ = f(v ± v₀)/(v ± vₛ).</p>
-        <button class="complete-btn" onclick="markComplete(3)">Mark as Complete</button>
-    </div>
-
-    <div class="section" id="chapter4">
-        <h2>⚡ 4. Electricity and Magnetism</h2>
-        <h3>a. Electrostatics</h3>
-        <p>F = kq₁q₂/r². E = F/q. Capacitance: C = Q/V.</p>
-        <h3>b. Circuits and Domestic Electricity</h3>
-        <p>V = IR. Series: R_total = R₁ + R₂. Power: P = VI.</p>
-        <h3>c. Electromagnetism</h3>
-        <p>Induction: ε = -dΦ/dt. Motor: F = ILB sinθ.</p>
-        <button class="complete-btn" onclick="markComplete(4)">Mark as Complete</button>
-    </div>
-
-    <div class="section" id="chapter5">
-        <h2>☢️ 5. Radioactivity and Nuclear Energy</h2>
-        <h3>a. Radiation and Radioactivity</h3>
-        <p>Alpha, beta, gamma. Half-life: N = N₀e⁻λt.</p>
-        <h3>b. Atomic Model</h3>
-        <p>Nucleus + electrons. Bohr’s energy levels.</p>
-        <h3>c. Nuclear Energy</h3>
-        <p>Fission (U-235 splits), fusion (H joins). E = mc².</p>
-        <button class="complete-btn" onclick="markComplete(5)">Mark as Complete</button>
-    </div>
-
-    <!-- Elective Part -->
-    <div class="section" id="chapter6">
-        <h2>🌌 6. Astronomy and Space Science</h2>
-        <h3>a. The Universe as a Whole</h3>
-        <p>Big Bang, Hubble’s Law: v = H₀d.</p>
-        <h3>b. The Solar System</h3>
-        <p>Kepler’s Laws: T² ∝ r³.</p>
-        <h3>c. Exploration of Space</h3>
-        <p>Telescopes, probes. Mars next?</p>
-        <button class="complete-btn" onclick="markComplete(6)">Mark as Complete</button>
-    </div>
-
-    <div class="section" id="chapter7">
-        <h2>⚛️ 7. Atomic World</h2>
-        <h3>a. Atomic Structure</h3>
-        <p>Quantum shells, numbers.</p>
-        <h3>b. Quantum Physics</h3>
-        <p>Photoelectric: E = hf. Uncertainty principle.</p>
-        <h3>c. Solid State Physics</h3>
-        <p>Band gaps: conductors, semiconductors.</p>
-        <button class="complete-btn" onclick="markComplete(7)">Mark as Complete</button>
-    </div>
-
-    <div class="section" id="chapter8">
-        <h2>🌍 8. Energy and Use of Energy</h2>
-        <h3>a. Energy Sources</h3>
-        <p>Fossil, nuclear, renewables.</p>
-        <h3>b. Energy Conversion and Efficiency</h3>
-        <p>Efficiency = useful/total.</p>
-        <h3>c. Energy and the Environment</h3>
-        <p>Greenhouse effect, sustainability.</p>
-        <button class="complete-btn" onclick="markComplete(8)">Mark as Complete</button>
-    </div>
-
-    <div class="section" id="chapter9">
-        <h2>🩺 9. Medical Physics</h2>
-        <h3>a. Radiation in Medicine</h3>
-        <p>X-rays, radiotherapy.</p>
-        <h3>b. Imaging Techniques</h3>
-        <p>Ultrasound, MRI, PET.</p>
-        <h3>c. Biomechanics</h3>
-        <p>Forces in body, prosthetics.</p>
-        <button class="complete-btn" onclick="markComplete(9)">Mark as Complete</button>
-    </div>
-
-    <!-- Quiz Section -->
-    <div class="quiz">
-        <h2>🧠 Physics Galaxy Quiz</h2>
-        <div class="question">
-            <p>1. What’s the Ideal Gas Law?</p>
-            <div class="option"><input type="radio" name="q1" value="a"> a) PV = nRT</div>
-            <div class="option"><input type="radio" name="q1" value="b"> b) F = ma</div>
-            <div class="option"><input type="radio" name="q1" value="c"> c) E = mc²</div>
-        </div>
-        <div class="question">
-            <p>2. What provides centripetal force?</p>
-            <div class="option"><input type="radio" name="q2" value="a"> a) Tension or gravity</div>
-            <div class="option"><input type="radio" name="q2" value="b"> b) Friction only</div>
-            <div class="option"><input type="radio" name="q2" value="c"> c) Sound waves</div>
-        </div>
-        <div class="question">
-            <p>3. What’s the power formula?</p>
-            <div class="option"><input type="radio" name="q3" value="a"> a) P = VI</div>
-            <div class="option"><input type="radio" name="q3" value="b"> b) V = IR</div>
-            <div class="option"><input type="radio" name="q3" value="c"> c) F = kq₁q₂/r²</div>
-        </div>
-        <div class="question">
-            <p>4. What’s half-life?</p>
-            <div class="option"><input type="radio" name="q4" value="a"> a) Time for half to decay</div>
-            <div class="option"><input type="radio" name="q4" value="b"> b) Time to fully decay</div>
-            <div class="option"><input type="radio" name="q4" value="c"> c) Time to double</div>
-        </div>
-        <div class="question">
-            <p>5. What’s the photoelectric effect?</p>
-            <div class="option"><input type="radio" name="q5" value="a"> a) Light ejecting electrons</div>
-            <div class="option"><input type="radio" name="q5" value="b"> b) Sound amplifying waves</div>
-            <div class="option"><input type="radio" name="q5" value="c"> c) Heat melting solids</div>
-        </div>
-        <button onclick="checkAnswers()">Blast Off Answers!</button>
-        <div id="result"></div>
-    </div>
-
-    <script>
-        // Load progress from local storage
-        function loadProgress() {
-            for (let i = 1; i <= 9; i++) {
-                let progress = localStorage.getItem(`chapter${i}`) || 0;
-                document.getElementById(`progress${i}`).textContent = `Progress: ${progress}%`;
-            }
-        }
-
-        // Mark chapter as complete (100% progress)
-        function markComplete(chapter) {
-            localStorage.setItem(`chapter${chapter}`, 100);
-            document.getElementById(`progress${chapter}`).textContent = `Progress: 100%`;
-            alert(`Chapter ${chapter} completed! 🌟`);
-        }
-
-        // Quiz checking
-        function checkAnswers() {
-            let score = 0;
-            const answers = { q1: 'a', q2: 'a', q3: 'a', q4: 'a', q5: 'a' };
-            for (let i = 1; i <= 5; i++) {
-                const q = document.querySelector(`input[name="q${i}"]:checked`);
-                if (q && q.value === answers[`q${i}`]) score++;
-            }
-            const result = document.getElementById('result');
-            result.innerHTML = `You scored ${score}/5! ${score === 5 ? 'Cosmic Genius! 🌠' : score > 2 ? 'Star Explorer! ✨' : 'Keep Orbiting! 🚀'}`;
-            result.style.color = score === 5 ? '#00ddeb' : score > 2 ? '#ffd700' : '#ff4500';
-        }
-
-        // Load progress on page load
-        window.onload = loadProgress;
-    </script>
+        <section id="resources">
+            <h2>Resources</h2>
+            <p>Explore these external resources for more learning:</p>
+            <ul>
+                <li><a href="https://www.kyc.edu.hk/kla/physics/dse1.pdf" target="_blank">DSE Physics Syllabus (KYCHK)</a></li>
+                <li><a href="https://afterschool.com.hk/blog/269-dse-physics-force-and-motion/" target="_blank">AfterSchool DSE Physics Notes</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 DSE Physics Force and Motion Website</p>
+    </footer>
 </body>
 </html>
